@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>FabisKuechen</title>
+    <title>Fabis Küchen</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -10,6 +10,18 @@
   </head>
 
   <body>
+    <nav>
+      <ul>
+        <li><%= link_to "Home", root_path %></li>
+        <li><%= link_to "About", static_pages_about_path %></li>
+        <li><%= link_to "Contact", static_pages_contact_path %></li>
+      </ul>
+    </nav>
+
     <%= yield %>
+
+    <footer>
+      &copy; 2018 Fabis Küchen
+    </footer>
   </body>
 </html>
