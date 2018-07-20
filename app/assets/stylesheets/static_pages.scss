@@ -3,9 +3,25 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 /** General Layout Settings */
+html, 
 body {
-  background-color: #ff7373;
+  height: 100%;
+  padding-top: 74px;
+  background-color: #ff6f69;
 }
+/** Main Content */
+.main-content {
+  min-height: 100%;
+  margin-bottom: -142px;
+}
+/** Adjustments to make the footer sticky to main content*/
+.main-content::after {
+  content: "";
+  display: block;
+}
+.footer, .main-content::after { height: 142px; }
+/** Footer */
+.footer { background-color: #ffcc5c; }
 
 /** Typography */
 h2 { text-transform: uppercase; }

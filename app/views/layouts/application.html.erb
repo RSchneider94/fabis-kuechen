@@ -13,17 +13,32 @@
   </head>
 
   <body>
-    <nav>
-      <ul>
-        <li><%= link_to "Home", root_path %></li>
-        <li><%= link_to "About", static_pages_about_path %></li>
-        <li><%= link_to "Contact", static_pages_contact_path %></li>
+    <nav class="navbar fixed-top navbar-light bg-light">
+      <a class="navbar-brand"><%= link_to "Fabis Küchen", root_path %></a>
+      <%# <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button> %>
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <%= link_to "About", static_pages_about_path, class: 'nav-link' %>
+        </li>
+        <li class="nav-item">
+          <%= link_to "Contact", static_pages_contact_path, class: 'nav-link' %>
+        </li>
       </ul>
     </nav>
 
-    <%= yield %>
+    <main class="main-content">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <%= yield %>
+          </div>
+        </div>
+      </div>
+    </main>
 
-    <footer>
+    <footer class="footer text-center">
       &copy; 2018 Fabis Küchen
     </footer>
   </body>
