@@ -3,25 +3,18 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 /** General Layout Settings */
+body > .main-content { padding-top: 70px; }
 html, 
-body {
-  height: 100%;
-  padding-top: 74px;
-  background-color: #ff6f69;
-}
-/** Main Content */
-.main-content {
-  min-height: 100%;
-  margin-bottom: -142px;
-}
-/** Adjustments to make the footer sticky to main content*/
-.main-content::after {
-  content: "";
-  display: block;
-}
-.footer, .main-content::after { height: 142px; }
+body { background-color: #ff6f69; }
+/** Navbar */
+.fabiskuechens-bg__yellow { background-color: #ffcc5c; }
 /** Footer */
-.footer { background-color: #ffcc5c; }
-
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  line-height: 60px;
+}
 /** Typography */
 h2 { text-transform: uppercase; }
