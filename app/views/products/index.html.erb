@@ -2,30 +2,18 @@
 
 <h1>Products</h1>
 
-<table class="table table-light">
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Description</th>
-      <th>Image url</th>
-      <th colspan="3">Options</th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @products.each do |product| %>
-      <tr>
-        <td><%= product.name %></td>
-        <td><%= product.description %></td>
-        <td><%= product.image_url %></td>
-        <td><%= link_to 'Show', product %></td>
-        <td><%= link_to 'Edit', edit_product_path(product) %></td>
-        <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Product', new_product_path %>
+<div class="row products__container">
+  <% @products.each do |product| %>
+  <div class="col-xs-6 col-md-4 products__item">
+    <div class="card" style="width: 18rem;">
+      <%= image_tag(product.image_url, class:'card-img-top', style:'height: 198.14px') %>
+      <div class="card-body">
+        <h5 class="card-title"><%= product.name %></h5>
+        <p class="card-text"><%= product.description %></p>
+        <hr>
+        <p class="card-text">€ <%= product.price %></p>
+      </div>
+    </div>
+  </div>
+  <% end %>
+</div>
