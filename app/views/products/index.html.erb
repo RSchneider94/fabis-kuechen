@@ -3,19 +3,5 @@
 <h1>Products</h1>
 
 <div class="row products__container">
-  <% @products.each do |product| %>
-  <%= link_to product do %>
-    <div class="col-xs-6 col-md-4 products__item">
-      <div class="card" style="width: 18rem;">
-        <%= image_tag(product.image_url, class:'card-img-top', style:'height: 198.14px') %>
-        <div class="card-body">
-          <h5 class="card-title"><%= product.name %></h5>
-          <p class="card-text"><%= product.description %></p>
-          <hr>
-          <p class="card-text">€ <%= product.price %></p>
-        </div>
-      </div>
-    </div>
-    <% end %>
-  <% end %>
+  <%= render @products %>
 </div>
