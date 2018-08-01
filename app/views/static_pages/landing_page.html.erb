@@ -9,7 +9,7 @@
       <div class="carousel-item <%= 'active' if product == @products.first %>">
         <%= image_tag(product.image_url, class:'d-block w-100') %>
         <div class="carousel-caption d-none d-md-block">
-          <h5><%= product.name %></h5>
+          <h5><%= link_to product.name, product %></h5>
           <p><%= product.description %></p>
         </div>
       </div>

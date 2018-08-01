@@ -19,11 +19,17 @@ body > .main-content { padding-top: 70px; }
 html, 
 body {
   height: 100%;
-  margin: 0px;
   background-color: #ff6f69;
 }
+a { color: #fff; }
+a:hover {
+  text-decoration: none;
+  color: #ffcc5c
+}
+
 /** Navbar */
 .fabiskuechens-bg__yellow { background-color: #ffcc5c; }
+
 /** Footer */
 .footer {
   position: absolute;
@@ -32,5 +38,6 @@ body {
   height: 60px;
   line-height: 60px;
 }
+
 /** Typography */
 h2 { text-transform: uppercase; }
