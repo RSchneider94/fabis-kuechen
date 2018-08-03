@@ -8,9 +8,8 @@
     <% @products.each do |product| %>
       <div class="carousel-item <%= 'active' if product == @products.first %>">
         <%= image_tag(product.image_url, class:'d-block w-100') %>
-        <div class="carousel-caption d-none d-md-block">
-          <h5><%= link_to product.name, product %></h5>
-          <p><%= product.description %></p>
+        <div class="carousel-caption d-none d-md-flex justify-content-center">
+          <h5 class="align-self-center"><%= link_to product.name, product %></h5>
         </div>
       </div>
     <% end %>
