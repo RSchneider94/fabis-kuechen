@@ -15,10 +15,13 @@
  */
 
 /** General Layout Settings */
-body > .main-content { padding-top: 70px; }
-html, 
+html {
+  position: relative;
+  min-height: 100%;
+}
 body {
-  height: 100%;
+  padding-top: 70px;
+  margin-bottom: 60px;
   background-color: #ff6f69;
 }
 a { color: #fff; }
