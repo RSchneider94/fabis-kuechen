@@ -1,6 +1,6 @@
 <h2>Lieblingsprodukte</h2>
 <div id="carouselFeaturedProduct" class="carousel slide" data-ride="carousel">
-  <ol class="<%= @products.length > 1 ? 'carousel-indicators' : '' %>">
+  <ol class="carousel-indicators">
     <% @products.each_with_index do |product, index| %>
     <li data-target="#carouselFeaturedProduct" 
       data-slide-to="<%= index %>" class="<%= index == 0 ? 'active' : ''%>">
