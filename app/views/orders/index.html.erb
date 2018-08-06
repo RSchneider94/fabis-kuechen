@@ -1,15 +1,17 @@
 <h2>Orders</h2>
 
-<table class="table table-light">
-  <thead class="thead-dark">
-    <tr>
-      <th scope="col">#Order</th>
-      <th scope="col">Product Name</th>
-      <th scope="col">Product Description</th>
-      <th scope="col">Product Price</th>
-    </tr>
-  </thead>
-  <tbody>
-    <%= render @orders %>
-  </tbody>
-</table>
+<div class="table-responsive">
+  <table class="table table-light">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">#Order</th>
+        <th scope="col">Product Name</th>
+        <th scope="col">Product Description</th>
+        <th scope="col">Order Total</th>
+      </tr>
+    </thead>
+    <tbody>
+      <%= render @orders %>
+    </tbody>
+  </table>
+</div>
