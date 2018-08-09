@@ -34,6 +34,18 @@
             <%= link_to "Kontaktieren", static_pages_contact_path, class: 'nav-link' %>
           </li>
         </ul>
+        <%= form_with(
+            url: products_path,
+            method: 'get',
+            local: true,
+            class: 'form-inline') do |form| %>
+          <%= form.text_field :q,
+              id: 'q',
+              value: params[:q],
+              placeholder: 'Suchen...',
+              class: 'form-control mr-sm-2' %>
+          <%= form.submit 'Los!', class: 'btn btn-outline-success my-2 my-sm-0' %>
+        <% end %>
       </div>
     </nav>
 
