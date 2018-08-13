@@ -34,6 +34,23 @@
             <%= link_to "Kontaktieren", static_pages_contact_path, class: 'nav-link' %>
           </li>
         </ul>
+        |
+        <ul class="navbar-nav">
+          <% if user_signed_in? %>
+            <li class="nav-item">
+              <%= link_to raw('<i class="fas fa-sign-out-alt"></i> Logout'),
+              destroy_user_session_path,
+              method: :delete,
+              class: 'nav-link' %>
+            </li>
+          <% else %>
+            <li class="nav-item">
+              <%= link_to link_to raw('<i class="fas fa-sign-in-alt"></i> Login'),
+              new_user_session_path,
+              class: 'nav-link' %>
+            </li>
+          <% end %>
+        </ul>
         <%= form_with(
             url: products_path,
             method: 'get',
@@ -53,6 +70,7 @@
       <div class="container">
         <div class="row">
           <div class="col-12">
+            <p class="notice"><%= notice %></p>
             <%= yield %>
           </div>
         </div>
