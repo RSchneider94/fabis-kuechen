@@ -70,7 +70,16 @@
       <div class="container">
         <div class="row">
           <div class="col-12">
-            <p class="notice"><%= notice %></p>
+            <% if notice %>
+              <div id="notice" class="alert alert-dark" role="alert">
+                <%= notice %>
+              </div>
+            <% end %>
+            <% if alert %>
+              <div id="alert" class="alert alert-dark" role="alert">
+                <%= alert %>
+              </div>
+            <% end %>
             <%= yield %>
           </div>
         </div>
