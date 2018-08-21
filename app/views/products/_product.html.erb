@@ -5,7 +5,7 @@
       <h5 class="card-title"><%= link_to product.name, product %></h5>
       <p class="card-text"><%= product.description %></p>
       <hr>
-      <p class="card-text font-weight-bold">€ <%= product.price %></p>
+      <p class="card-text font-weight-bold"><%= number_to_currency(product.price, unit: '€') %></p>
     </div>
   </div>
 </div>
