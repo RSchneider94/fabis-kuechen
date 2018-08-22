@@ -10,11 +10,15 @@ class Product < ApplicationRecord
     end
   end
 
-  def highest_rating_comment
-    comments.rating_desc.first
+  def highest_rating_comment_first
+    comments.rating_desc
   end
 
-  def lowest_rating_comment
-    comments.rating_asc.first
+  def lowest_rating_comment_first
+    comments.rating_asc
+  end
+
+  def average_rating
+    comments.average(:rating).to_f
   end
 end

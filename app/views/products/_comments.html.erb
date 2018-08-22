@@ -1,0 +1,17 @@
+<div class="col-12 product-reviews__container">
+  <% @comments.each do |comment| %>
+    <div class="row">
+      <div class="col-12 product-reviews__container-title">
+        <p>
+          <%= comment.user.first_name %>
+        </p>
+        <div class="rated" data-score="<%= comment.rating %>"></div>
+      </div>
+      <div class="col-12 product-reviews__container-body">
+        <p>
+          <%= comment.body %>
+        </p>
+      </div>
+    </div>
+  <% end %>
+</div>

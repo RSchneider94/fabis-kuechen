@@ -12,7 +12,7 @@
     </p>
     <p>
       <strong>Bewertungen:</strong>
-      <%= @product.highest_rating_comment.rating %>
+      <div class="rated" data-score="<%= @product.average_rating %>"></div>
     </p>
   </div>
 </div>
@@ -30,8 +30,12 @@
     </p>
     <hr>
     <h3>Bewertungen</h3>
-    <%= @product.highest_rating_comment %>
-
+    <%= render 'comments' %>
+    <%= render 'new_comment' %>
+  </div>
+</div>
+<div class="row products__action-buttons mt-4">
+  <div class="col-12">
     <%= link_to 'Edit', edit_product_path(@product) %> |
     <%= link_to 'Back', products_path %>
   </div>
