@@ -1,15 +1,19 @@
-<% if signed_in? %>
-  <h4>Bewertung hinzufügen</h4>
-  <%= form_for([@product, @product.comments.build]) do |f| %>
-    <p>
-      <%= f.label :body, "Comments" %><br>
-      <%= f.text_area :body %>
-    </p>
-    <div class="rating"></div>
-    <p>
-      <%= f.submit "Submit" %>
-    </p>
-  <% end %>
-<% else %>
-  <h4>Sie müssen einloggen, um das Produkt zu bewerten.</h4>
-<% end %>
+<div class="row">
+  <div class="col-12 product-reviews__container-new_comment text-center">
+    <% if signed_in? %>
+      <h4>Bewertung hinzufügen</h4>
+      <%= form_for([@product, @product.comments.build]) do |f| %>
+        <div class="form-group">
+          <%= f.label :body, "Bitte, schreiben Sie Ihre Bewertung" %>
+          <%= f.text_area :body, class: 'form-control' %>
+        </div>
+        <div class="rating"></div>
+        <p>
+          <%= f.submit "Submit", class: 'btn btn-dark mt-4' %>
+        </p>
+    <% end %>
+    <% else %>
+      <h4>Sie müssen einloggen, um das Produkt zu bewerten.</h4>
+    <% end %>
+  </div>
+</div>

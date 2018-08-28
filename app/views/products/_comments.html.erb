@@ -2,9 +2,7 @@
   <% @comments.each do |comment| %>
     <div class="row">
       <div class="col-12 product-reviews__container-title">
-        <p>
-          <%= comment.user.first_name %>
-        </p>
+        Bewertung von: <%= comment.user.first_name ? comment.user.first_name : 'Ohne Name' %>
         <div class="rated" data-score="<%= comment.rating %>"></div>
       </div>
       <div class="col-12 product-reviews__container-body">
@@ -14,4 +12,9 @@
       </div>
     </div>
   <% end %>
+  <div class="row">
+    <div class="col-xs-12 col-md-4 pagination">
+      <%= will_paginate @comments, :container => false %>
+    </div>
+  </div>
 </div>

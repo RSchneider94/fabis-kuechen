@@ -54,6 +54,17 @@ a:hover {
 
 /** Products Show */
 
+/* Comments */
+.pagination { padding: 10px; }
+.pagination a,
+em,
+span {
+  padding: 8px;
+  border: 2px solid #ff6f69;
+  background-color: #f6cb5c;
+}
+.pagination a:hover { color: #212529; }
+
 /** Footer */
 .footer {
   position: absolute;
