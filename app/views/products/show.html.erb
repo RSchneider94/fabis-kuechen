@@ -32,12 +32,14 @@
     <%= render 'new_comment' %>
   </div>
 </div>
+<% if signed_in? && current_user.admin? %>
 <div class="row products__action-buttons mt-4">
   <div class="col-12">
     <%= link_to 'Edit', edit_product_path(@product) %> |
     <%= link_to 'Back', products_path %>
   </div>
 </div>
+<% end %>
 
 
 
