@@ -9,8 +9,15 @@
         <p>
           <%= comment.body %>
         </p>
+        <% if signed_in? && current_user.admin? %>
+        <%= link_to ('<i class="fas fa-trash-alt"></i> Bewertung löschen').html_safe, 
+            product_comment_path(comment.product, comment), 
+            method: :delete, 
+            data: { confirm: 'Sicher?' } %>
+      <% end %>
       </div>
     </div>
+    <hr>
   <% end %>
   <div class="row">
     <div class="col-xs-12 col-md-4 pagination">

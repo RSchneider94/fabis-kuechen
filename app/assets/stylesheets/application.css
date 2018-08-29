@@ -57,9 +57,9 @@ a:hover {
 /* Comments */
 .pagination { padding: 10px; }
 .pagination a,
-em,
-span {
-  padding: 8px;
+.pagination em,
+.pagination span {
+  padding: 6px;
   border: 2px solid #ff6f69;
   background-color: #f6cb5c;
 }
