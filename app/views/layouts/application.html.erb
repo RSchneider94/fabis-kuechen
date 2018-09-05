@@ -38,14 +38,19 @@
         <ul class="navbar-nav">
           <% if user_signed_in? %>
             <li class="nav-item">
-              <%= link_to raw('<i class="fas fa-sign-out-alt"></i> Logout'),
+              <%= link_to ('<i class="fas fa-user-circle"></i> Konto').html_safe,
+              users_path,
+              class: 'nav-link' %>
+            </li>
+            <li class="nav-item">
+              <%= link_to ('<i class="fas fa-sign-out-alt"></i> Logout').html_safe,
               destroy_user_session_path,
               method: :delete,
               class: 'nav-link' %>
             </li>
           <% else %>
             <li class="nav-item">
-              <%= link_to link_to raw('<i class="fas fa-sign-in-alt"></i> Login'),
+              <%= link_to ('<i class="fas fa-sign-in-alt"></i> Login').html_safe,
               new_user_session_path,
               class: 'nav-link' %>
             </li>
