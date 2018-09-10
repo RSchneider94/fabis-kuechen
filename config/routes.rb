@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   end
   resources :orders, only: [:index, :show, :new, :create, :destroy]
   root 'static_pages#landing_page'
+  get 'static_pages/index'
   get 'static_pages/about'
   get 'static_pages/contact'
   post 'static_pages/danke'
