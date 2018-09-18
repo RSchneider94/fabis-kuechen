@@ -1,7 +1,7 @@
 <script
   src="https://checkout.stripe.com/checkout.js" class="stripe-button"
   data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
-  data-amount="<%= @product.price %>"
+  data-amount="<%= (@product.price*100).to_i %>"
   data-name="<%= @product.name %>"
   data-description="<%= @product.description %>"
   data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
