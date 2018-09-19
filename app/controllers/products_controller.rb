@@ -6,7 +6,9 @@ class ProductsController < ApplicationController
   # GET /products.json
   def index
     if params[:q]
+      logger.debug "Getting the search query when somewhat is searched."
       search_query = params[:q]
+      logger.debug search_query
       @products = Product.search(search_query)
     else
       @products = Product.all
