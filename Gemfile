@@ -53,6 +53,8 @@ group :development, :test do
   # Further Tests
   gem 'rails-controller-testing'
   gem "factory_bot_rails", "~> 4.0"
+  # Security Check
+  gem "brakeman"
 end
 
 group :development do
