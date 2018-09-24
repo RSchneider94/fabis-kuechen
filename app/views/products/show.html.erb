@@ -1,6 +1,9 @@
 <div class="row products__details-header">
   <div class="col-5">
-    <%= image_tag(@product.image_url, class:'img-thumbnail') %>
+    <%= image_tag(
+        @product.image_url,
+        class:'img-thumbnail img-zoom',
+        data_zoom_image: @product.image_url) %>
   </div>
   <div class="col-7 text-center">
     <h2><%= @product.name %></h2>

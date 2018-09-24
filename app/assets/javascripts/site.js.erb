@@ -1,11 +1,11 @@
 $(document).on('turbolinks:load', function() {
+  // Raty functions
   $('.rating').raty({
     starHalf: '<%= asset_path 'star-half.png' %>',
     starOff: '<%= asset_path 'star-off.png' %>',
     starOn: '<%= asset_path 'star-on.png' %>',
     scoreName: 'comment[rating]'
   });
-
   $('.rated').raty({
     starHalf: '<%= asset_path 'star-half.png' %>',
     starOff: '<%= asset_path 'star-off.png' %>',
@@ -16,5 +16,9 @@ $(document).on('turbolinks:load', function() {
     }
   });
 
+  // Product Thumbnails Zoom
+  $('.img-zoom').elevateZoom();
+
+  // Fade the alerts off
   $('.alert').delay(4000).fadeOut(400);
 });
