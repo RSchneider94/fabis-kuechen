@@ -13,7 +13,7 @@
     </p>
     <p>
       <strong>Bewertungen:</strong>
-      <div class="rated" data-score="<%= @product.average_rating %>"></div>
+      <div id="average-rating" class="rated" data-score="<%= @product.average_rating %>"></div>
     </p>
     <%= form_with(url: '/payments/create') do |form| %>
       <%= render partial: 'shared/stripe_checkout_button' %>
