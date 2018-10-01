@@ -1,5 +1,7 @@
 <h2>Products</h2>
 
 <div class="row products__container">
-  <%= render @products %>
+  <% cache(cache_key_for_products) do %>
+    <%= render @products %>
+  <% end %>
 </div>

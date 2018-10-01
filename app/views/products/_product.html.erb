@@ -1,11 +1,13 @@
-<div class="col-xs-12 col-md-4 products__item">
-  <div class="card">
-    <%= image_tag(product.image_url, class:'card-img-top', style:'height: 100px') %>
-    <div class="card-body">
-      <h5 class="card-title"><%= link_to product.name, product %></h5>
-      <p class="card-text"><%= product.description %></p>
-      <hr>
-      <p class="card-text font-weight-bold"><%= number_to_currency(product.price, unit: '€') %></p>
+<% cache product do %>
+  <div class="col-xs-12 col-md-4 products__item">
+    <div class="card">
+      <%= image_tag(product.image_url, class:'card-img-top', style:'height: 100px') %>
+      <div class="card-body">
+        <h5 class="card-title"><%= link_to product.name, product %></h5>
+        <p class="card-text"><%= product.description %></p>
+        <hr>
+        <p class="card-text font-weight-bold"><%= number_to_currency(product.price, unit: '€') %></p>
+      </div>
     </div>
   </div>
-</div>
+<% end %>
