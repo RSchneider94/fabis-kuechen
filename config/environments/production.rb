@@ -94,4 +94,8 @@ Rails.application.configure do
 
   # Default Mail URLs
   config.action_mailer.default_url_options = { host: 'https://fabiskuechen.herokuapp.com/', port: 3000 }
+
+  # ActionCables
+  config.web_socket_server_url = "wss://fabiskuechen.herokuapp.com/cable"
+  config.action_cable.allowed_request_origins = ['https://fabiskuechen.herokuapp.com', 'http://fabiskuechen.herokuapp.com']
 end

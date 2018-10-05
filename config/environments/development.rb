@@ -61,4 +61,7 @@ Rails.application.configure do
 
   # Default Mail URLs
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+
+  # Prefer JS
+  config.app_generators.javascript_engine = :javascript
 end
